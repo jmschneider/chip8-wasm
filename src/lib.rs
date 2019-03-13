@@ -35,7 +35,19 @@ impl Emulator {
     self.cpu.execute_cycle();
   }
 
-  pub fn display(&mut self) -> bool {
-    self.cpu.display.memory[0]
+  pub fn load(&mut self, data: &[u8]) {
+    self.cpu.load(data);
+  }
+
+  pub fn height(&self) -> usize {
+    chip8::display::HEIGHT
+  }
+
+  pub fn width(&self) -> usize {
+    chip8::display::WIDTH
+  }
+
+  pub fn pixels(&self) -> *const bool {
+    self.cpu.display.memory.as_ptr()
   }
 }
