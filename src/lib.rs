@@ -35,6 +35,10 @@ impl Emulator {
     self.cpu.execute_cycle();
   }
 
+  pub fn decrement_timers(&mut self) {
+    self.cpu.decrement_timers();
+  }
+
   pub fn load(&mut self, data: &[u8]) {
     self.cpu.load(data);
   }
@@ -49,5 +53,13 @@ impl Emulator {
 
   pub fn pixels(&self) -> *const bool {
     self.cpu.display.memory.as_ptr()
+  }
+
+  pub fn key_down(&mut self, key: u8) {
+    self.cpu.keypad.key_down(key);
+  }
+
+  pub fn key_up(&mut self, key: u8) {
+    self.cpu.keypad.key_up(key);
   }
 }
