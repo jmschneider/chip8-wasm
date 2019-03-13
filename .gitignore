@@ -5,3 +5,4 @@ bin/
 pkg/
 www/
 wasm-pack.log
+.cargo
