@@ -17,10 +17,59 @@
         justify-content: center;
         background-color: #000;
       }
+
+      #help, #help form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: monospace;
+        color: #fff;
+      }
     </style>
   </head>
   <body>
-    <script src="./chip8.js"></script>
     <canvas id="emulator"></canvas>
+
+    <div id="help">
+      <legend>Controls</legend>
+      <pre>
+1 2 3 4
+q w e r
+a s d f
+z x c v
+      </pre>
+      <!-- <legend>Game</legend>
+      <form>
+        <select id="games">
+          <option value="15PUZZLE">15PUZZLE</option>
+          <option value="BLITZ">BLITZ</option>
+          <option value="CONNECT4">CONNECT4</option>
+          <option value="HIDDEN">HIDDEN</option>
+          <option value="INVADERS" selected>INVADERS</option>
+          <option value="MAZE">MAZE</option>
+          <option value="MISSILE">MISSILE</option>
+          <option value="PONG2">PONG2</option>
+          <option value="TANK">TANK</option>
+          <option value="TICTAC">TICTAC</option>
+          <option value="VBRIX">VBRIX</option>
+          <option value="WIPEOFF">WIPEOFF</option>
+          <option value="BLINKY">BLINKY</option>
+          <option value="BRIX">BRIX</option>
+          <option value="GUESS">GUESS</option>
+          <option value="IBM">IBM</option>
+          <option value="KALEID">KALEID</option>
+          <option value="MERLIN">MERLIN</option>
+          <option value="PONG">PONG</option>
+          <option value="PUZZLE">PUZZLE</option>
+          <option value="SYZYGY">SYZYGY</option>
+          <option value="TETRIS">TETRIS</option>
+          <option value="UFO">UFO</option>
+          <option value="VERS">VERS</option>
+        </select>
+      </form> -->
+    </div>
+  
+    <script src="./chip8.js"></script>
   </body>
 </html>
