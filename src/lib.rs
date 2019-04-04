@@ -55,6 +55,14 @@ impl Emulator {
     self.cpu.display.memory.as_ptr()
   }
 
+  pub fn display_timer(&self) -> u8 {
+    self.cpu.dt
+  }
+
+  pub fn sound_timer(&self) -> u8 {
+    self.cpu.st
+  }
+
   pub fn key_down(&mut self, key: u8) {
     self.cpu.keypad.key_down(key);
   }
